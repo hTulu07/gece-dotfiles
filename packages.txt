@@ -1,0 +1,14 @@
+# Fedora packages used by the Gece setup:
+#   sudo dnf install $(grep -v '^#' packages.txt)
+kitty
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
+fastfetch
+btop
+eza
+bat
+fzf
+fd-find
+zoxide
+papirus-icon-theme

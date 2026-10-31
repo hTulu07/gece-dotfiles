@@ -1,0 +1,50 @@
+[Plymouth Theme]
+Name=Gece
+Description=Gece: navy gradient, constellation mark, ice-blue spinner
+ModuleName=two-step
+
+[two-step]
+Font=Sans 12
+TitleFont=Sans 28
+ImageDir=/usr/share/plymouth/themes/gece
+DialogHorizontalAlignment=.5
+DialogVerticalAlignment=.6
+TitleHorizontalAlignment=.5
+TitleVerticalAlignment=.382
+HorizontalAlignment=.5
+VerticalAlignment=.7
+WatermarkHorizontalAlignment=.5
+WatermarkVerticalAlignment=.42
+Transition=none
+TransitionDuration=0.0
+BackgroundStartColor=0x0f141c
+BackgroundEndColor=0x17233a
+ProgressBarBackgroundColor=0x263142
+ProgressBarForegroundColor=0x7aa8ff
+MessageBelowAnimation=true
+
+[boot-up]
+UseEndAnimation=false
+UseFirmwareBackground=false
+
+[shutdown]
+UseEndAnimation=false
+UseFirmwareBackground=false
+
+[reboot]
+UseEndAnimation=false
+UseFirmwareBackground=false
+
+[updates]
+SuppressMessages=true
+ProgressBarShowPercentComplete=true
+UseProgressBar=true
+Title=Installing Updates...
+SubTitle=Do not turn off your computer
+
+[system-upgrade]
+SuppressMessages=true
+ProgressBarShowPercentComplete=true
+UseProgressBar=true
+Title=Upgrading System...
+SubTitle=Do not turn off your computer

@@ -1,0 +1,82 @@
+# Gece — two-line prompt, ice blue on night navy
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+format = """
+[╭─](#263142)$os$directory$git_branch$git_status$c$dotnet$python$nodejs$java$rust$cmd_duration$fill$time
+[╰─](#263142)$character"""
+
+[os]
+disabled = false
+style = "#7aa8ff"
+format = "[$symbol]($style) "
+[os.symbols]
+Fedora = " "
+Linux = " "
+
+[directory]
+style = "bold #7aa8ff"
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = " 󰌾"
+read_only_style = "#ef6b73"
+
+[git_branch]
+symbol = " "
+style = "#a9c6ff"
+format = "[on](#56647a) [$symbol$branch]($style) "
+
+[git_status]
+style = "#e8c96f"
+format = "([\\[$all_status$ahead_behind\\]]($style) )"
+
+[c]
+symbol = " "
+style = "#8a98ad"
+format = "[via](#56647a) [$symbol($version)]($style) "
+
+[dotnet]
+symbol = "󰪮 "
+style = "#b49cff"
+format = "[via](#56647a) [$symbol($version )(🎯 $tfm )]($style)"
+detect_files = ["global.json", "Directory.Build.props", "Directory.Build.targets", "Packages.props"]
+detect_extensions = ["csproj", "fsproj", "sln", "slnx"]
+
+[python]
+symbol = " "
+style = "#e8c96f"
+format = '[via](#56647a) [$symbol($version )(\($virtualenv\) )]($style)'
+
+[nodejs]
+symbol = " "
+style = "#7fd1a0"
+format = "[via](#56647a) [$symbol($version )]($style)"
+
+[java]
+symbol = " "
+style = "#ef6b73"
+format = "[via](#56647a) [$symbol($version )]($style)"
+
+[rust]
+symbol = " "
+style = "#e8a06f"
+format = "[via](#56647a) [$symbol($version )]($style)"
+
+[cmd_duration]
+min_time = 2000
+style = "#e8c96f"
+format = "[ $duration]($style) "
+
+[fill]
+symbol = " "
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "#56647a"
+format = "[ $time]($style)"
+
+[character]
+success_symbol = "[❯](bold #7aa8ff)"
+error_symbol = "[❯](bold #ef6b73)"
+vimcmd_symbol = "[❮](bold #7fd1a0)"

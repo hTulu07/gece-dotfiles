@@ -1,0 +1,21 @@
+/* Gece — internal pages (new tab, settings, add-ons) */
+@-moz-document url-prefix("about:") {
+  :root {
+    --in-content-page-background: #141a24 !important;
+    --in-content-box-background: #18202b !important;
+    --in-content-box-border-color: #263142 !important;
+    --in-content-page-color: #d8e0ea !important;
+    --in-content-primary-button-background: #7aa8ff !important;
+    --in-content-primary-button-background-hover: #93b9ff !important;
+    --in-content-primary-button-text-color: #0f141c !important;
+    --in-content-accent-color: #7aa8ff !important;
+    --in-content-link-color: #7aa8ff !important;
+    --newtab-background-color: #141a24 !important;
+    --newtab-background-color-secondary: #18202b !important;
+    --color-accent-primary: #7aa8ff !important;
+  }
+  body { background-color: #141a24 !important; }
+}
+
+/* scrollbars on every site */
+:root { scrollbar-color: #263142 #0f141c; }

@@ -1,0 +1,11 @@
+{
+    "KPlugin": {
+        "Authors": [{"Name": "Hüseyin Tülü"}],
+        "Description": "Flat gece night-blue decoration with boxed classic buttons",
+        "Id": "Gece-Classic",
+        "License": "MIT",
+        "Name": "Gece Classic",
+        "Version": "1.0"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

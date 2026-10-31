@@ -1,0 +1,30 @@
+Ctrl+R → fuzzy-search your command history (fzf)
+Ctrl+T → pick a file and paste its path into the command line
+Alt+C → jump into a folder with fzf
+cd <word> → zoxide remembers folders you visit often, no full path needed
+proj → jump into a project in ~/Projects with fzf
+git switch -c <branch> → create a new branch and switch to it
+git commit --amend --no-edit → add a forgotten file to the last commit
+git stash -u → set unfinished work aside, bring it back with git stash pop
+git log -S "word" → find the commit that added or removed that word
+git bisect → binary-search for the commit that introduced a bug
+!! → repeat the last command (the classic sudo !!)
+!$ → the last argument of the previous command
+cheat <command> → quick cheat sheet (cheat tar, cheat c/pointers)
+serve → share the current folder on port 8000
+ports → see which program is listening on which port
+valgrind --leak-check=full ./prog → hunt for memory leaks in C
+gcc -Wall -Wextra -g → turn on warnings and add debug info for gdb
+gdb ./prog → run, bt, break main, next, print x
+python3 -m venv .venv → a separate environment for every project
+python3 -i file.py → run it, then keep playing with the variables
+dotnet watch run → rebuild every time you save
+time <command> → measure how long a command takes
+btop instead of htop → a nicer system monitor
+Big-O: make it correct first, then make it fast
+Rubber duck: when stuck, explain the problem out loud
+Keep commits small and frequent; the message should say why, not what
+man <command> → offline manual; search inside it with /
+xxd file | head → look at the raw bytes of a file
+Ctrl+A / Ctrl+E → jump to start / end of the line
+Ctrl+W → delete a word, Ctrl+U → delete to the start of the line

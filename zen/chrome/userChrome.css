@@ -1,0 +1,209 @@
+/* Gece — Zen browser chrome, matched to the KDE desktop (Gece.colors + Gece-Classic)
+   titlebar #0f141c · window #141a24 · view #0b0f15 · button #18202b
+   line #263142 · text #d8e0ea · dim #8a98ad · accent #7aa8ff */
+
+:root {
+  --gece-title: #0f141c;
+  --gece-window: #141a24;
+  --gece-view: #0b0f15;
+  --gece-button: #18202b;
+  --gece-button-hover: #1f2936;
+  --gece-line: #263142;
+  --gece-text: #d8e0ea;
+  --gece-dim: #8a98ad;
+  --gece-accent: #7aa8ff;
+  --gece-accent-soft: rgba(122, 168, 255, 0.14);
+  --gece-radius: 4px;
+
+  /* Zen theme variables */
+  --zen-primary-color: var(--gece-accent) !important;
+  --zen-colors-primary: var(--gece-button) !important;
+  --zen-colors-secondary: var(--gece-button) !important;
+  --zen-colors-tertiary: var(--gece-window) !important;
+  --zen-colors-border: var(--gece-line) !important;
+  --zen-colors-border-contrast: var(--gece-line) !important;
+  --zen-colors-hover-bg: var(--gece-button-hover) !important;
+  --zen-colors-input-bg: var(--gece-view) !important;
+  --zen-colors-primary-foreground: var(--gece-text) !important;
+  --zen-input-border-color: var(--gece-line) !important;
+  --zen-toolbar-element-bg: var(--gece-button) !important;
+  --zen-toolbar-element-bg-hover: var(--gece-button-hover) !important;
+  --zen-dialog-background: var(--gece-button) !important;
+  --zen-in-content-dialog-background: var(--gece-button) !important;
+  --zen-urlbar-background: var(--gece-button) !important;
+  --zen-sidebar-themed-icon-fill: var(--gece-accent) !important;
+
+  /* flat window colour everywhere — no workspace gradients, no grain */
+  --zen-main-browser-background: var(--gece-window) !important;
+  --zen-main-browser-background-toolbar: var(--gece-window) !important;
+  --zen-main-browser-background-old: var(--gece-window) !important;
+  --zen-main-browser-background-toolbar-old: var(--gece-window) !important;
+  --zen-themed-toolbar-bg: var(--gece-window) !important;
+  --zen-themed-toolbar-bg-transparent: var(--gece-window) !important;
+  --zen-grainy-background-opacity: 0 !important;
+
+  /* square-ish shapes like the Gece-Classic buttons */
+  --zen-border-radius: 6px !important;
+  --zen-webview-border-radius: var(--gece-radius) !important;
+  --zen-squircle-value: 1 !important;
+  --zen-element-separation: 6px !important;
+  --zen-appcontent-border: 1px solid var(--gece-line) !important;
+  --zen-big-shadow: none !important;
+  --tab-border-radius: var(--gece-radius) !important;
+  --toolbarbutton-border-radius: var(--gece-radius) !important;
+
+  /* Firefox variables */
+  --toolbar-bgcolor: var(--gece-window) !important;
+  --toolbar-color: var(--gece-text) !important;
+  --toolbar-field-background-color: var(--gece-view) !important;
+  --toolbar-field-focus-background-color: var(--gece-view) !important;
+  --toolbar-field-color: var(--gece-text) !important;
+  --toolbar-field-focus-color: var(--gece-text) !important;
+  --toolbar-field-border-color: var(--gece-line) !important;
+  --toolbar-field-focus-border-color: var(--gece-accent) !important;
+  --toolbarbutton-hover-background: var(--gece-button-hover) !important;
+  --toolbarbutton-active-background: var(--gece-accent-soft) !important;
+  --lwt-text-color: var(--gece-text) !important;
+  --arrowpanel-background: var(--gece-button) !important;
+  --arrowpanel-color: var(--gece-text) !important;
+  --arrowpanel-border-color: var(--gece-line) !important;
+  --arrowpanel-border-radius: 6px !important;
+  --panel-separator-color: var(--gece-line) !important;
+  --focus-outline-color: var(--gece-accent) !important;
+  --tab-selected-bgcolor: var(--gece-button) !important;
+  --sidebar-background-color: var(--gece-window) !important;
+  --sidebar-text-color: var(--gece-text) !important;
+}
+
+#zen-main-app-wrapper, #browser, #navigator-toolbox, #titlebar,
+#zen-browser-background, .zen-browser-generic-background {
+  background: var(--gece-window) !important;
+}
+#zen-browser-background::before, #zen-browser-background::after,
+.zen-browser-generic-background::before, .zen-browser-generic-background::after {
+  background: var(--gece-window) !important;
+}
+.zen-browser-grain { display: none !important; }
+
+/* web page: flat panel with a 1px line, like the terminal view inside Konsole */
+#tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer,
+.browserSidebarContainer {
+  border-radius: var(--gece-radius) !important;
+  outline: 1px solid var(--gece-line) !important;
+  outline-offset: -1px;
+  box-shadow: none !important;
+}
+
+/* ── tabs ─────────────────────────────────────────── */
+.tabbrowser-tab .tab-background {
+  border-radius: var(--gece-radius) !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+}
+.tabbrowser-tab:hover:not([selected]) .tab-background {
+  background: var(--gece-button) !important;
+}
+.tabbrowser-tab[selected] .tab-background,
+.tabbrowser-tab[multiselected] .tab-background {
+  background: var(--gece-button) !important;
+  border-color: var(--gece-line) !important;
+  box-shadow: inset 2px 0 0 var(--gece-accent) !important;
+}
+.tabbrowser-tab .tab-label { color: var(--gece-dim) !important; }
+.tabbrowser-tab[selected] .tab-label { color: var(--gece-text) !important; }
+.tab-loading-burst, .tab-throbber { color: var(--gece-accent) !important; fill: var(--gece-accent) !important; }
+
+/* pinned / essential tiles get the boxed button look */
+.tabbrowser-tab[zen-essential] .tab-background,
+.tabbrowser-tab[pinned] .tab-background {
+  background: var(--gece-button) !important;
+  border-color: var(--gece-line) !important;
+}
+.tabbrowser-tab[zen-essential][selected] .tab-background,
+.tabbrowser-tab[pinned][selected] .tab-background {
+  border-color: var(--gece-accent) !important;
+  box-shadow: none !important;
+}
+
+/* "+ New Tab" button: plain row, dim text */
+#tabs-newtab-button, .zen-workspace-new-tab-button {
+  background: transparent !important;
+  color: var(--gece-dim) !important;
+  border-radius: var(--gece-radius) !important;
+}
+#tabs-newtab-button:hover { background: var(--gece-button) !important; color: var(--gece-text) !important; }
+
+/* separators */
+.vertical-pinned-tabs-container-separator,
+#zen-workspaces-button + *,
+.zen-workspace-empty-space { border-color: var(--gece-line) !important; }
+.vertical-pinned-tabs-container-separator { background: var(--gece-line) !important; }
+
+/* ── toolbar buttons: boxed, like the titlebar buttons ─────────── */
+toolbarbutton .toolbarbutton-icon,
+toolbarbutton .toolbarbutton-badge-stack,
+toolbarbutton .toolbarbutton-text {
+  border-radius: var(--gece-radius) !important;
+  border: 1px solid transparent !important;
+}
+toolbarbutton:not([disabled]):hover > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack, .toolbarbutton-text) {
+  background: var(--gece-button-hover) !important;
+  border-color: var(--gece-line) !important;
+}
+toolbarbutton:is([open], [checked], :active) > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack, .toolbarbutton-text) {
+  background: var(--gece-accent-soft) !important;
+  border-color: var(--gece-accent) !important;
+}
+
+/* ── url bar ─────────────────────────────────────── */
+:is(#urlbar-background, .urlbar-background) {
+  background: var(--gece-view) !important;
+  border: 1px solid var(--gece-line) !important;
+  border-radius: var(--gece-radius) !important;
+  box-shadow: none !important;
+}
+#urlbar[focused] :is(#urlbar-background, .urlbar-background),
+#urlbar[open] :is(#urlbar-background, .urlbar-background),
+#urlbar[breakout-extend] :is(#urlbar-background, .urlbar-background) {
+  background: var(--gece-button) !important;
+  border-color: var(--gece-accent) !important;
+  border-radius: 6px !important;
+}
+#urlbar { color: var(--gece-text) !important; }
+#urlbar .urlbarView-row[selected],
+#urlbar .urlbarView-row:hover {
+  background: var(--gece-accent-soft) !important;
+  border-radius: var(--gece-radius) !important;
+}
+#urlbar .urlbarView-row[selected] .urlbarView-title { color: var(--gece-text) !important; }
+#urlbar .urlbarView-url, #urlbar .urlbarView-action { color: var(--gece-accent) !important; }
+
+/* ── menus & panels ─────────────────────────────── */
+menupopup, panel {
+  --panel-background: var(--gece-button) !important;
+  --panel-color: var(--gece-text) !important;
+  --panel-border-color: var(--gece-line) !important;
+  --panel-border-radius: 6px !important;
+  --panel-shadow: 0 6px 18px rgba(0, 0, 0, 0.45) !important;
+}
+menuitem, menu { border-radius: var(--gece-radius) !important; }
+menuitem:hover, menu:hover, menuitem[_moz-menuactive], menu[_moz-menuactive] {
+  background-color: var(--gece-accent-soft) !important;
+  color: var(--gece-text) !important;
+}
+menuseparator { border-color: var(--gece-line) !important; }
+
+* { scrollbar-color: var(--gece-line) transparent; scrollbar-width: thin; }
+::selection { background: rgba(122, 168, 255, 0.35); color: var(--gece-text); }
+
+/* Zen's floating search box (Ctrl+L / new tab) */
+#urlbar[zen-floating-urlbar="true"] .urlbar-background {
+  --zen-urlbar-background-base: var(--gece-button) !important;
+  --zen-urlbar-background-transparent: var(--gece-button) !important;
+  background-color: var(--gece-button) !important;
+  border: 1px solid var(--gece-line) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 18px 60px -10px rgba(0, 0, 0, 0.7) !important;
+}
+#urlbar[zen-floating-urlbar="true"] .urlbarView-body-inner { border-color: var(--gece-line) !important; }
+#urlbar .urlbarView-action { background: var(--gece-accent-soft) !important; border-radius: var(--gece-radius) !important; }
