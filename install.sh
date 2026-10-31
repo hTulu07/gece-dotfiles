@@ -53,5 +53,5 @@ cat <<MSG
 
 Done. Open a new terminal to see the shell setup.
 Missing tools?   sudo dnf install \$(grep -v '^#' packages.txt)
-Boot + login:    sudo ./system/install.sh
+Boot menu, splash, login: sudo ./system/install.sh
 MSG

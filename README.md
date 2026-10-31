@@ -17,10 +17,12 @@ My KDE Plasma 6 setup on Fedora: a quiet night-blue desktop. *Gece* means "night
 | System monitor | `config/btop/themes/gece.theme` |
 | Browser | `zen/` (Zen Browser: native title bar, Gece colors) |
 | Notes | `obsidian/gece.css` (Obsidian CSS snippet) |
+| Boot menu | `system/grub/gece/` (GRUB theme with Fedora/Windows icons, for dual boot) |
 | Boot splash | `system/plymouth/gece/` |
 | Login screen | `system/plasmalogin/` (Plasma Login Manager colors + wallpaper) |
 | Wallpaper | `wallpapers/gece.png` (4K) |
 
+![Boot menu](screenshots/grub.png)
 ![Boot splash](screenshots/boot.png)
 
 ## Install
@@ -30,7 +32,7 @@ git clone https://github.com/hTulu07/gece-dotfiles ~/Projects/gece-dotfiles
 cd ~/Projects/gece-dotfiles
 sudo dnf install $(grep -v '^#' packages.txt)   # tools used by the shell setup
 ./install.sh                                     # configs + Plasma look
-sudo ./system/install.sh                         # optional: boot splash + login screen
+sudo ./system/install.sh                         # optional: boot menu, boot splash, login screen
 ```
 
 - `install.sh` links the configs into place, so editing a file here changes your setup.
@@ -47,3 +49,4 @@ Also used: [starship](https://starship.rs) prompt, [Inter](https://rsms.me/inter
 MIT
 
 The spinner images in `system/plymouth/gece/` are recolored from Plymouth's *spinner* theme (GPL-2.0-or-later).
+The GRUB icons come from [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) (GPL-3.0).

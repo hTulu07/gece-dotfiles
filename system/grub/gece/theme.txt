@@ -1,0 +1,56 @@
+# Gece GRUB theme: night-blue wallpaper, constellation mark, ice-blue selection
+title-text: ""
+desktop-image: "background.png"
+desktop-color: "#0f141c"
+terminal-font: "Gece Regular 16"
+terminal-box: "terminal_box_*.png"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
++ image {
+    left = 50%-100
+    top = 22%
+    file = "mark.png"
+}
+
++ boot_menu {
+    left = 50%-380
+    top = 38%
+    width = 760
+    height = 40%
+    item_font = "Gece Regular 22"
+    item_color = "#8a98ad"
+    selected_item_color = "#eef3fa"
+    item_height = 52
+    item_padding = 14
+    item_spacing = 10
+    icon_width = 32
+    icon_height = 32
+    item_icon_space = 16
+    selected_item_pixmap_style = "select_*.png"
+    scrollbar = false
+}
+
++ label {
+    id = "__timeout__"
+    left = 0
+    top = 84%
+    width = 100%
+    align = "center"
+    font = "Gece Regular 16"
+    color = "#7aa8ff"
+    text = "Starting in %d s"
+}
+
++ label {
+    left = 0
+    top = 84%+30
+    width = 100%
+    align = "center"
+    font = "Gece Regular 16"
+    color = "#56647a"
+    text = "↑ ↓ choose  ·  Enter boot  ·  e edit  ·  c console"
+}
