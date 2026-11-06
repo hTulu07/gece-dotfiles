@@ -1,4 +1,4 @@
-// Gece rice — Zen settings (managed by Claude; edit freely)
+// Gece rice — Zen settings (edit freely)
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("browser.shell.checkDefaultBrowser", false);
 // dark everywhere
